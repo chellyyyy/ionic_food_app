@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon-only icon="chevron-back-outline" defaulHref="/" >
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div class="container">
+    <h1>All</h1>
+    
+  <div class="content">
+    <div class="ct_btn">
+      <button *ngFor="let food of menuItems" color="light"  [routerLink]="['/detail', food.id]" >
+        <div>
+          <img src="\assets\{{food.image}}">
+          <div>
+            <label for="">
+              <p>{{food.name}}</p>
+              <p style="color:#e39c22"><span class="highlight"></span>{{food.price}}</p>
+            </label>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  </div>
+</ion-content>

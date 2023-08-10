@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline"   text="" defaulHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div  class="top">
+    
+    <div class="content">
+      <div class="img"><img  class="" src="..\..\..\assets\{{menuItem.image}}"></div>
+      <div class="inside">
+        <div class="name_price">
+          <p class="p">{{ menuItem.name }}</p>
+          <p class="p2"><span class="highlight"> {{ menuItem.price }}</span> </p>
+        </div>
+        <div class="btn">
+          <ion-button>
+            <ion-icon name="timer-outline"></ion-icon>
+            <p class="rating">{{ menuItem.deliveryTime }}</p>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="star-outline"></ion-icon>
+            <p class="rating">{{ menuItem.rating }}</p>
+          </ion-button>
+    
+        </div>
+        <div>
+          <p class="p">About</p>
+          <p >{{ menuItem.description }}</p>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</ion-content>

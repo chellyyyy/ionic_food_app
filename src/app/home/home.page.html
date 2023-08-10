@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true" >
+  <div class="container">
+    <h1>Food Menu</h1>
+    <div id="menu">
+      <div class="menu_item">
+        <ion-button [routerLink]="['/all']"  style="width: 80px; height: 80px;">
+          <img src="\assets\images\all.png">
+        </ion-button>
+        <h4>All</h4>
+      </div>
+      <div class="menu_item">
+        <ion-button [routerLink]="['/fastfood']"  style="width: 80px; height: 80px;">
+          <img src="\assets\images\fastfood.png">
+        </ion-button>
+        <h4>Fast Food</h4>
+      </div>
+      <div class="menu_item">
+        <ion-button [routerLink]="['/seafood']"  style="width: 80px; height: 80px;">
+          <img src="\assets\images\seafood.png">
+        </ion-button>
+        <h4>Sea Food</h4>
+      </div>
+    </div>
+
+
+  <h1 style="color:#8e8181;">Popular</h1>
+  <div class="content">
+    <div class="ct_btn">
+      <button *ngFor="let food of menuItems" color="light"  [routerLink]="['/detail', food.id]" >
+        <div>
+          <img src="\assets\{{food.image}}">
+          <div>
+            <label for="">
+              <p>{{food.name}}</p>
+              <p style="color:#e39c22"> <span class="highlight"></span>{{food.price}}</p>
+            </label>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  </div>
+  
+
+</ion-content>

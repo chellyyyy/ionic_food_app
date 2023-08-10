@@ -1,0 +1,82 @@
+.container{
+  padding: 0 20px;
+}
+.container h1{
+  font-size: 40px;
+  font-weight: bolder;
+}
+#menu {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+}
+
+.menu_item {
+  text-align: center;
+  margin-right: 10px; 
+  --ion-color-primary: #7226dd;
+  
+}
+
+
+.menu_item:last-child {
+  margin-right: 0; 
+}
+.content {
+  display:grid;
+  grid-template-columns: auto auto ;
+  justify-content:center;
+}
+
+.ct_btn {
+  display:grid;
+  grid-template-columns: auto auto ;
+  justify-content:space-between;
+  width: 100%;
+  gap:15px;
+}
+
+.ct_btn:last-child {
+  margin-right: 0; /* Không có khoảng cách sau div cuối cùng */
+}
+
+.ct_btn button {
+  
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 50px;
+  height: 200px;
+  
+}
+
+.ct_btn button img {
+  padding-top: 10px;
+  width: 70%; /* Kích thước 100% cho hình ảnh trong button */
+  height: 120px;
+}
+
+
+.ct_btn button p {
+  font-weight:bolder;
+  text-align: center;
+  font-size: 17px;
+  width: 98%;
+  margin: 5px 0; /* Khoảng cách giữa tên và giá */
+}
+.highlight {
+  position: relative;
+  display: inline-block;
+  padding: 10px 5px;
+}
+
+.highlight::before {
+  content: "$";
+  position: absolute;
+  left: -8px;
+  top: -3px;
+  padding: 5px;
+}
